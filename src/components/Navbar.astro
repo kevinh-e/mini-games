@@ -1,0 +1,20 @@
+---
+import { ModeToggle } from "@/components/ModeToggle";
+import { Logo } from "@/components/Logo";
+---
+
+<nav class="flex h-16 shrink-0 items-center gap-2 justify-center transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+  <div class="container grid grid-cols-10 items-center">
+    <div class="col-span-4 mx-2">
+      <Logo client:idle/>
+    </div>
+    <div class="col-span-5"/>
+    <div class="col-span-1">
+      <ModeToggle class:list={['themeToggle']} client:load/>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .themeToggle { display: flex; flex-direction: row; align-items: center; justify-content: center;}
+</style>
