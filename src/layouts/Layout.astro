@@ -1,10 +1,5 @@
 ---
 import '@/styles/global.css';
-
-import Navbar from '@/components/Navbar.astro';
-import { ViewTransitions } from 'astro:transitions';
-import { AppSidebar } from '@/components/app-sidebar';
-import { SidebarProvider, SidebarTrigger, SidebarInset } from '@/components/ui/sidebar';
 import  Page  from "@/app/dashboard/page"
 
 interface Props {
@@ -43,8 +38,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col h-screen font-monospace">
-    <Page>
-      <Navbar/>
+    <Page client:idle>
       <slot/>
     </Page>
 	</body>
