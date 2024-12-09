@@ -105,7 +105,7 @@ const data = {
     },
     {
       name: "settings",
-      url: "#",
+      url: "/settings",
       icon: Settings2,
     },
   ],

@@ -38,9 +38,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col h-screen font-monospace">
+	<body class="flex flex-col h-screen font-monospace text-foreground">
     <Page client:idle>
-      <slot/>
+      <div class="h-full w-full flex flex-col">
+        <slot/>
+      </div>
     </Page>
 	</body>
 </html>

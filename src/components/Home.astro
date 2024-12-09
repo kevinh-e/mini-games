@@ -1,9 +1,14 @@
 ---
+import { Button } from "./ui/button"
 ---
 
-<main class="container h-full">
-  <section class="flex flex-col justify-center items-center h-full">
-    <h1 class="text-5xl tracking-wide font-monospace">mini games</h1>
-  </section>
-</main>
+<div class="h-full mx-4 mb-4 bg-gradient-to-b from-muted/10 to-muted/50 rounded-lg">
+  <main class="container h-full">
+    <section class="flex flex-col justify-center items-center h-full">
+      <h1 class="text-3xl md:text-6xl tracking-wide font-monospace font-semibold mb-2 text-foreground">mini-games</h1>
+      <h2 class="text-muted-foreground text-lg md:text-2xl mb-4">a collection of simple web minigames</h2>
+      <Button className="text-md tracking-wide px-6 font-semibold transition-all duration-500 transform hover:scale-110" aria-label="Start">start !</Button>
+    </section>
+  </main>
+</div>
 
