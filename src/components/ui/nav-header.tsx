@@ -1,7 +1,5 @@
-import * as React from "react"
-import { ChevronsUpDown, DicesIcon, Plus } from "lucide-react"
+import { DicesIcon } from "lucide-react"
 
-import { Logo } from "./Logo";
 import { ModeToggle } from "./ModeToggle";
 import {
   SidebarMenu,
@@ -11,7 +9,7 @@ import {
 } from "@/components/ui/sidebar"
 
 export function NavHeader() {
-  const { isMobile } = useSidebar()
+  const { isMobile, state } = useSidebar()
 
   return (
     <SidebarMenu>
@@ -28,7 +26,6 @@ export function NavHeader() {
               mini-games
             </span>
           </div>
-          <ModeToggle />
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>

@@ -22,8 +22,9 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { Separator } from "./ui/separator"
 
-export function NavProjects({
+export function NavOther({
   projects,
 }: {
   projects: {
@@ -36,7 +37,7 @@ export function NavProjects({
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <Separator className="mb-6 w-[80%] mx-auto" />
       <SidebarMenu>
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
