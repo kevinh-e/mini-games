@@ -2,6 +2,7 @@ import * as React from "react"
 import {
   Keyboard,
   LayoutDashboard,
+  LayoutList,
   PuzzleIcon,
   Settings2,
   Target,
@@ -19,6 +20,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { games } from "@/components/routes";
 
 const data = {
   user: {
@@ -31,66 +33,27 @@ const data = {
       title: "puzzle",
       url: "/puzzle",
       icon: PuzzleIcon,
-      isActive: true,
-      items: [
-        {
-          title: "history",
-          url: "#",
-        },
-        {
-          title: "starred",
-          url: "#",
-        },
-        {
-          title: "settings",
-          url: "#",
-        },
-      ],
+      items: games.puzzle.games
     },
     {
       title: "word",
       url: "/word",
       icon: Keyboard,
-      items: [
-        {
-          title: "genesis",
-          url: "#",
-        },
-        {
-          title: "explorer",
-          url: "#",
-        },
-        {
-          title: "quantum",
-          url: "#",
-        },
-      ],
+      items: games.word.games,
     },
     {
       title: "strategy",
       url: "/strategy",
       icon: Target,
-      items: [
-        {
-          title: "introduction",
-          url: "#",
-        },
-        {
-          title: "get Started",
-          url: "#",
-        },
-        {
-          title: "tutorials",
-          url: "#",
-        },
-        {
-          title: "changelog",
-          url: "#",
-        },
-      ],
+      items: games.strategy.games,
     },
   ],
   other: [
+    {
+      name: "all games",
+      url: "/games",
+      icon: LayoutList,
+    },
     {
       name: "dashboard",
       url: "/dashboard",

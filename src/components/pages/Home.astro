@@ -1,5 +1,5 @@
 ---
-import { Button } from "./ui/button"
+import {Button} from "@/components/ui/button"
 ---
 
 <div class="h-full flex flex-col items-center mx-4 mb-4 bg-gradient-to-b from-muted/10 to-muted/30 rounded-lg">
@@ -7,7 +7,7 @@ import { Button } from "./ui/button"
     <section class="flex flex-col justify-center items-center h-full">
       <h1 class="text-3xl md:text-6xl tracking-wide font-monospace font-semibold mb-2 text-foreground">mini-games</h1>
       <h2 class="text-muted-foreground text-lg md:text-2xl mb-4">a collection of simple web minigames</h2>
-      <Button className="text-md tracking-wide px-6 font-semibold transition-all duration-500 transform hover:scale-110" aria-label="Start"><a href="/games">start !</a></Button>
+      <Button className="text-md tracking-wide px-6 font-semibold transition-all duration-500 transform hover:scale-110" aria-label="Start"><a href="/games" data-astro-prefetch>start !</a></Button>
     </section>
   </main>
 </div>
