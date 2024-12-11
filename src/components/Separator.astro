@@ -4,7 +4,7 @@ const { orientation = 'horizontal', className = '' } = Astro.props;
 
 // Determine orientation class
 const orientationClass =
-  orientation === 'vertical' ? 'w-[2px] h-full' : 'h-[2px] w-full';
+  orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full';
 ---
 <div class={`bg-border shrink-0 ${orientationClass} ${className}`} role="separator" />
 

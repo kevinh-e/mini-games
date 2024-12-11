@@ -36,16 +36,16 @@ const data = {
       items: games.puzzle.games
     },
     {
-      title: "word",
-      url: "/word",
-      icon: Keyboard,
-      items: games.word.games,
-    },
-    {
       title: "strategy",
       url: "/strategy",
       icon: Target,
       items: games.strategy.games,
+    },
+    {
+      title: "word",
+      url: "/word",
+      icon: Keyboard,
+      items: games.word.games,
     },
   ],
   other: [
@@ -66,7 +66,7 @@ const data = {
     },
     {
       name: "settings",
-      url: "#",
+      url: "/settings",
       icon: Settings2,
     },
   ],
