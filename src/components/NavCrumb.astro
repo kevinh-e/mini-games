@@ -14,13 +14,13 @@ const paths = pathname.split("/");
     }
     <ol class="flex flex-row text-muted-foreground text-sm items-center tracking-wide">
       <li>
-        <a class="cursor-pointer transition-colors hover:text-foreground" href={`/${paths[1]}`}>{paths[1]}</a>
+        <a class="cursor-pointer transition-colors hover:text-foreground" href={`/${paths[1]}`} aria-label=`Return to ${paths[1]}`>{paths[1]}</a>
       </li>
       {paths[2] ?
         <li><ChevronRight orientation="vertical" className="mx-2 h-3.5 w-3.5" /></li> : null
       }
       <li>
-        <a class="cursor-pointer transition-colors hover:text-foreground" href={`/${paths[2]}`}>{paths[2]}</a>
+        <a class="cursor-pointer transition-colors hover:text-foreground" href={`/${paths[2]}`} aria-label=`Return to ${paths[2]}`>{paths[2]}</a>
       </li>
     </ol>
   </div>
