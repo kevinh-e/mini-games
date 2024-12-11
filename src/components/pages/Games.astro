@@ -4,20 +4,20 @@ import { games } from "@/components/routes";
 import GameCard from "@/components/GameCard.astro"
 ---
 
-<div class="h-full flex flex-col items-center mx-4 mb-4 bg-muted/10 rounded-lg p-8">
+<div class="h-full overflow-y-scroll flex flex-col items-center mx-4 mb-4 bg-muted/10 rounded-lg p-8">
   <main class="container h-full flex flex-col justify-start items-center">
     <header class="w-full mb-2">
       <h1 class="w-full text-4xl mb-3 ml-6 font-semibold tracking-wide">all games</h1>
       <Separator />
     </header>
-    <ol class="w-full px-6 py-3">
-      { Object.entries(games).map(([key, { url, games }]) => {
+    <ol class="w-full px-6 py-4">
+      {Object.entries(games).map(([key, { games }]) => {
         return (
-        <h2 class="w-full text-2xl text-secondary-foreground font-semibold">{key} games</h2>
-        <section class="w-full my-4 py-4 px-6 rounded-md">
+        <h2 class="w-full text-3xl text-secondary-foreground font-semibold text-center">{key} games</h2>
+        <section class="w-full my-4 py-4 rounded-md">
           <li class="list-none grid grid-cols-4 gap-4">
             {games.map((game) => (
-            <GameCard link={game.url} title={game.title}/>
+            <GameCard link={game.url} title={game.title} description={game.description}/>
             ))}
           </li>
         </section>
