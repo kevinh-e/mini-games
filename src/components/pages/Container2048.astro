@@ -1,0 +1,16 @@
+---
+import Separator from "@/components/Separator.astro";
+import Mergo from "@/components/pages/games/2048.tsx"
+---
+
+<div class="h-full overflow-y-scroll flex flex-col items-center mx-4 mb-4 bg-muted/10 rounded-lg p-8">
+  <main class="container h-full flex flex-col justify-start items-center">
+    <header class="w-full mb-2">
+      <h1 class="w-full text-4xl mb-3 font-semibold tracking-wide">2048</h1>
+      <Separator />
+    </header>
+    <div class="w-full px-6 py-4 h-full">
+      <Mergo client:load/>
+    </div>
+  </main>
+</div>
